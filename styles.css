@@ -14,6 +14,20 @@ body{
 
 
 }
+
+#label2, #label3{
+    display: block;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-size: 100px;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+    margin-top: 40px;
+
+}
+  
 .press1{
     display: block;
     text-align: center;
@@ -51,7 +65,9 @@ body{
 .redlight{
     background-color: white;
 }
-#start{
+#start, #info{
+    margin: auto;
+    margin-bottom: 30px;
     height: 50px;
     width: 100px;
     border: 10px solid greenyellow;
@@ -59,10 +75,14 @@ body{
     font-weight: bolder;
     font-size: larger;
 }
-.startbtn{
+
+#info, #start{
+    display: block;
+}
+/* .startbtn{
     display: flex;
     justify-content: center;
-}
+} */
 #footer1{
     height:24vh;
     display: flex;
@@ -70,5 +90,26 @@ body{
     align-items: flex-end;
     color: white;
 }
+
+#infoMatter{
+    background-color: white;
+    height: 300px;
+    width:  300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+#x{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    margin-left: 230px;
+}
 /* 🕹️😁
-hey my name is  Aakash Vintipalli*/
+hey my name is  Aakash*/
