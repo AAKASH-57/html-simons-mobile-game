@@ -1,2 +1,2 @@
-# html-simons-mobile-game
+# simons-mobile-game
 This game challenge your Memory Power
