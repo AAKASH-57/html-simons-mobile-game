@@ -5,10 +5,14 @@ var button;
 var userClickedPattern=[];
 var Status=false;
 var lev=0;
+var highScore=0;
+var Score=0;
 $(document).ready(function(){
     $(".btn").hide();
+    $("#infoMatter").hide();
     $("#start").on("click",function keyPress(){ 
-        $("#start").hide();
+        $(".startbtn").hide();
+        $(".Score1").hide();
         setTimeout(function(){
             $(".btn").show();
             if (!Status){           
@@ -16,9 +20,19 @@ $(document).ready(function(){
                 Status=true;
             }
         },400)
-        
+    })
 
+    $("#info").on("click", function(){
+        $("#label1").hide();
+        $(".startbtn").hide();
+        $("#infoMatter").show();
     });
+})
+
+$("#x").click(function(){
+    $("#label1").show();
+    $(".startbtn").show();
+    $("#infoMatter").hide();
 })
 
 $(".btn").on("click", function(){
@@ -84,9 +98,15 @@ function   errorOccur(){
         $("body").css("backgroundColor","rgb(45, 41, 77)");
     }, 900);
     $("#label1").text("GAME OVER!!!");
+    if (lev > highScore){
+        highScore=lev;
+    }
+    $(".Score1").show();
+    $("#label2").text("your Score: "+lev);
+    $("#label3").text("High Score: "+ highScore);
     setTimeout(() => {
-        $("#label1").text("PRESS START BUTTON TO START!");
-        $("#start").show();
+
+        $(".startbtn").show();
         $(".btn").hide();
     }, 800);
    
